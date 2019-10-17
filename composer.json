@@ -1,0 +1,37 @@
+{
+    "name": "sower/server",
+    "description": "http-server",
+    "license": "Apache-2.0",
+    "authors": [
+    ],
+    "require": {
+        "symfony/finder": "^4.3.2",
+	    "ext-swoole": ">=4.3",	  	   
+	    "sower/frame": "~1.0.0",
+		"swoole/ide-helper": "^4.3",
+    },
+    "autoload": {
+        "psr-4": {
+            "sower\\swoole\\": "src"
+        },
+        "files": [
+            "src/helpers.php",
+			"src/helper/helper.php"
+        ]
+    },
+    "extra": {
+        "sower": {
+            "services": [
+                "sower\\swoole\\Service"
+            ],
+            "config": {
+                "swoole": "src/config/swoole.php"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "swoole/ide-helper": "^4.3",
+        "symfony/var-dumper": "^4.3"
+    }
+}
